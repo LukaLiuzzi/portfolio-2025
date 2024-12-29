@@ -1,28 +1,10 @@
-import Image from "next/image"
 import React from "react"
 
-const Hero = () => {
+const Footer = () => {
   return (
-    <section className="flex flex-col justify-center items-center mt-10">
-      <Image
-        src="/profile.jpg"
-        alt="Profile picture"
-        loading="lazy"
-        decoding="async"
-        className="rounded-full"
-        width={160}
-        height={160}
-      />
-
-      <div className="text-center">
-        <h1 className="lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6">
-          Luka Liuzzi
-        </h1>
-        <h2 className="font-medium rounded-3xl border border-border bg-primary-foreground py-2 text-sm">
-          Software Developer
-        </h2>
-      </div>
-      <div className="flex justify-center items-center mt-10 gap-4">
+    <div className="text-center font-bold text-muted-foreground py-4 flex justify-between items-center border-t border-border my-4">
+      © Luka Liuzzi
+      <div className="flex justify-center items-center gap-4">
         <a
           href="https://github.com/lukaliuzzi"
           target="_blank"
@@ -72,8 +54,8 @@ const Hero = () => {
           </svg>
         </a>
       </div>
-    </section>
+    </div>
   )
 }
 
-export default Hero
+export default Footer
