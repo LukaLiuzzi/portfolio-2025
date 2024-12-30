@@ -81,7 +81,7 @@ export default function Works() {
           <Link
             className="group relative h-full flex bg-primary-foreground/25 cursor-pointer flex-col items-start justify-center gap-y-3 rounded border border-border duration-300 ease-in-out hover:border-foreground/25 hover:bg-primary-foreground"
             key={work.id}
-            href={`/works/${work.title}`}
+            href={`/works/${work.slug}`}
           >
             <Image
               src={"/profile.jpg"}
@@ -94,27 +94,34 @@ export default function Works() {
             <div className="flex flex-1 flex-col items-start justify-start gap-y-2 px-5 py-3">
               <h2 className="text-xl font-bold">{work.title}</h2>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground pb-2">
-              {work.stack.map((tech) => (
-                <div key={tech} className="flex items-center gap-1 px-5">
-                  {skills.Frontend.map((skill) => {
-                    if (skill.name === tech) {
-                      return <skill.icon key={tech} className="h-5 w-5" />
-                    }
-                  })}
-                  {skills.Backend.map((skill) => {
-                    if (skill.name === tech) {
-                      return <skill.icon key={tech} className="h-5 w-5" />
-                    }
-                  })}
-                  {skills.Others.map((skill) => {
-                    if (skill.name === tech) {
-                      return <skill.icon key={tech} className="h-5 w-5" />
-                    }
-                  })}
-                  <span>{tech}</span>
-                </div>
-              ))}
+            <div className="marquee-container py-2">
+              <div className="marquee-content">
+                {[...work.stack, ...work.stack].map((tech, index) => (
+                  <span key={index} className="inline-flex items-center mx-4">
+                    {skills.Frontend.map((skill) => {
+                      if (skill.name === tech) {
+                        return (
+                          <skill.icon key={tech} className="h-5 w-5 mr-1" />
+                        )
+                      }
+                    })}
+                    {skills.Backend.map((skill) => {
+                      if (skill.name === tech) {
+                        return (
+                          <skill.icon key={tech} className="h-5 w-5 mr-1" />
+                        )
+                      }
+                    })}
+                    {skills.Others.map((skill) => {
+                      if (skill.name === tech) {
+                        return (
+                          <skill.icon key={tech} className="h-5 w-5 mr-1" />
+                        )
+                      }
+                    })}
+                  </span>
+                ))}
+              </div>
             </div>
           </Link>
         ))}

@@ -2,17 +2,19 @@
     {
         "id": 1,
         "title": "Work 1",
-        "description": "Description 1",
-        "image": "work1.jpg",
+        "description": "Description 1 lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.",
+        "image": "/profile.jpg",
+        "slug": "work-1",
         "url": "http://www.google.com",
         "source": "http://www.google.com",
-        "stack": ["HTML", "CSS", "JavaScript"]
+        "stack": ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "Express"]
     },
     {
         "id": 2,
         "title": "Work 2",
         "description": "Description 2",
-        "image": "work2.jpg",
+        "image": "/profile.jpg",
+        "slug": "work-2",
         "url": "http://www.google.com",
         "source": "http://www.google.com",
         "stack": ["HTML", "CSS", "JavaScript"]
@@ -21,7 +23,8 @@
         "id": 3,
         "title": "Work 3",
         "description": "Description 3",
-        "image": "work3.jpg",
+        "image": "/profile.jpg",
+        "slug": "work-3",
         "url": "http://www.google.com",
         "source": "http://www.google.com",
         "stack": ["HTML", "CSS", "JavaScript"]
