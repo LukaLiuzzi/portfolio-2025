@@ -1,4 +1,5 @@
 import About from "./components/About"
+import Education from "./components/Education"
 import Experience from "./components/Experience"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
@@ -13,6 +14,8 @@ export default function Home() {
       <About />
       <Separator />
       <Experience />
+      <Separator />
+      <Education />
       <Separator />
       <Skills />
       <Footer />

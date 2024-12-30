@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Work 1",
+        "description": "Description 1",
+        "image": "work1.jpg",
+        "url": "http://www.google.com",
+        "source": "http://www.google.com",
+        "stack": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "id": 2,
+        "title": "Work 2",
+        "description": "Description 2",
+        "image": "work2.jpg",
+        "url": "http://www.google.com",
+        "source": "http://www.google.com",
+        "stack": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "id": 3,
+        "title": "Work 3",
+        "description": "Description 3",
+        "image": "work3.jpg",
+        "url": "http://www.google.com",
+        "source": "http://www.google.com",
+        "stack": ["HTML", "CSS", "JavaScript"]
+    }
+]

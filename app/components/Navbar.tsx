@@ -1,20 +1,25 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import React, { useState, useEffect } from "react"
 
 const Navbar = () => {
+  const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const [activeItem, setActiveItem] = useState("home")
+  const [activeItem, setActiveItem] = useState("")
 
   useEffect(() => {
     setMounted(true)
     const isDarkMode = localStorage.getItem("darkMode") === "true"
     setDarkMode(isDarkMode)
     document.documentElement.classList.toggle("dark", isDarkMode)
-  }, [])
+
+    // Set active item based on current path
+    setActiveItem(pathname === "/" ? "home" : "works")
+  }, [pathname])
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
