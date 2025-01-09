@@ -19,11 +19,7 @@ const ExperienceItem = ({
         <h3 className="text-lg sm:text:xl font-bold">{title}</h3>
         <h4 className="text-base sm:text-lg font-light">{company}</h4>
         <h5 className="text-muted-foreground text-xs">{date}</h5>
-        {description && (
-          <p className="text-base font-light text-muted-foreground">
-            {description}
-          </p>
-        )}
+        {description && <p className="text-base font-light">{description}</p>}
       </div>
     </div>
   )

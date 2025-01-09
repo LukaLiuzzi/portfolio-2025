@@ -22,7 +22,12 @@ const Hero = () => {
           Software Developer
         </h2>
       </div>
-      <div className="flex justify-center items-center mt-10 gap-4">
+      <div
+        className="flex justify-center items-center mt-10 gap-4 p-4 rounded-full"
+        style={{
+          backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
+        }}
+      >
         <a
           href="https://github.com/lukaliuzzi"
           target="_blank"

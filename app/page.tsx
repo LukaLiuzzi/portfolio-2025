@@ -10,14 +10,21 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Separator />
-      <About />
-      <Separator />
-      <Experience />
-      <Separator />
-      <Education />
-      <Separator />
-      <Skills />
+      <Separator withMargin={false} />
+      <div
+        style={{
+          backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
+        }}
+        className="rounded-xl p-8"
+      >
+        <About />
+        <Separator />
+        <Experience />
+        <Separator />
+        <Education />
+        <Separator />
+        <Skills />
+      </div>
       <Footer />
     </>
   )
