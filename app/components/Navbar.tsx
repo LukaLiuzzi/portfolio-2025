@@ -45,7 +45,12 @@ const Navbar = () => {
     "w-10 h-10 flex justify-center items-center bg-background border rounded-md hover:shadow-sm transition-shadow border-border"
 
   return (
-    <div className="flex justify-between items-center bg-background text-foreground p-4 relative border-b border-border">
+    <div
+      className="flex justify-between items-center text-foreground p-4 relative border-b border-border rounded-md"
+      style={{
+        backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
+      }}
+    >
       <button onClick={toggleMenu} className={`md:hidden ${buttonStyles}`}>
         <div className="space-y-1">
           <div className="w-6 h-1 bg-foreground"></div>
@@ -153,7 +158,12 @@ const Navbar = () => {
       </div>
 
       {menuOpen ? (
-        <div className="fixed md:hidden top-0 left-0 w-48 h-full bg-background border-r border-foreground/20 shadow-lg z-50 transition-transform transform translate-x-0">
+        <div
+          className="fixed md:hidden top-0 left-0 w-48 h-full border-r border-foreground/20 shadow-lg z-50 transition-transform transform translate-x-0 backdrop-blur-md"
+          style={{
+            backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
+          }}
+        >
           <button
             onClick={toggleMenu}
             className="text-foreground text-xl absolute top-4 right-4"

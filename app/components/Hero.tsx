@@ -1,25 +1,33 @@
 import Image from "next/image"
 import React from "react"
+import ShinyText from "./ShinyText/ShinyText"
 
 const Hero = () => {
   return (
     <section className="flex flex-col justify-center items-center mt-10">
-      <Image
-        src="/profile.jpg"
-        alt="Profile picture"
-        loading="lazy"
-        decoding="async"
-        className="rounded-full"
-        width={160}
-        height={160}
-      />
+      <div className="rounded-full px-2 pt-2 bg-primary-foreground">
+        <Image
+          src="/luka.png"
+          alt="Profile picture"
+          loading="lazy"
+          decoding="async"
+          className="rounded-full"
+          width={160}
+          height={160}
+        />
+      </div>
 
       <div className="text-center">
         <h1 className="lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6">
           Luka Liuzzi
         </h1>
-        <h2 className="font-medium rounded-3xl border border-border bg-primary-foreground py-2 text-sm">
-          Software Developer
+        <h2 className="font-medium rounded-3xl border border-border bg-primary-foreground py-2 text-md">
+          <ShinyText
+            text="Software Developer"
+            disabled={false}
+            speed={1}
+            className="text-lg"
+          />
         </h2>
       </div>
       <div

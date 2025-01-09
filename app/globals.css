@@ -95,7 +95,3 @@ body {
   min-width: 100%;
   animation: marquee 15s linear infinite;
 }
-
-.bg-custom-background {
-  background-color: rgb(var(--background) / 0.8);
-}

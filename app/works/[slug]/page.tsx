@@ -23,8 +23,13 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const nextWork = works.findIndex((work) => work.slug === slug) + 1
 
   return (
-    <>
-      <section className="mt-10">
+    <div
+      className="px-8 rounded-xl"
+      style={{
+        backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
+      }}
+    >
+      <section className="mt-8 py-8">
         <Link
           href="/works"
           className="group relative flex w-fit cursor-pointer flex-nowrap rounded border border-border py-1.5 pl-7 pr-3 hover:border-foreground/25 hover:bg-primary-foreground duration-300 ease-in-out"
@@ -131,7 +136,7 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <BackToTop />
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 

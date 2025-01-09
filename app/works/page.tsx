@@ -72,8 +72,13 @@ const skills: SkillCategories = {
 
 export default function Works() {
   return (
-    <>
-      <h1 className="text-center sm:text-lg text-sm text-muted-foreground my-8">
+    <div
+      className="px-8 rounded-xl"
+      style={{
+        backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
+      }}
+    >
+      <h1 className="text-center sm:text-lg text-sm text-muted-foreground my-8 pt-8">
         Algunos proyectos en los que trabaje
       </h1>
       <section className="grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -130,6 +135,6 @@ export default function Works() {
         <BackToTop />
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
