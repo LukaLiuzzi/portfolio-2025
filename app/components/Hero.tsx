@@ -1,6 +1,7 @@
 import Image from "next/image"
 import React from "react"
 import ShinyText from "./ShinyText/ShinyText"
+import ElasticLine from "./fancy/elastic-line"
 
 const Hero = () => {
   return (
@@ -18,9 +19,17 @@ const Hero = () => {
       </div>
 
       <div className="text-center">
-        <h1 className="lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6">
-          Luka Liuzzi
-        </h1>
+        <div className="relative lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6">
+          <h1>Luka Liuzzi</h1>
+          <div className="absolute w-full h-1 -bottom-2 z-50">
+            <ElasticLine
+              grabThreshold={50}
+              releaseThreshold={200}
+              strokeWidth={1}
+              className="z-50"
+            />
+          </div>
+        </div>
         <h2 className="font-medium rounded-3xl border border-border bg-primary-foreground py-2 text-md">
           <ShinyText
             text="Software Developer"
