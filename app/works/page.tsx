@@ -91,10 +91,10 @@ export default function Works() {
               height={550}
               className="rounded-t-sm h-56 object-cover"
             />
-            <div className="flex flex-1 flex-col items-start justify-start gap-y-2 px-5 py-3">
+            <div className="flex flex-col items-start justify-start px-5">
               <h2 className="text-xl font-bold">{work.title}</h2>
             </div>
-            <div className="marquee-container py-2">
+            <div className="marquee-container pb-6 pt-3">
               <div className="marquee-content">
                 {[...work.stack, ...work.stack].map((tech, index) => (
                   <span key={index} className="inline-flex items-center mx-4">
