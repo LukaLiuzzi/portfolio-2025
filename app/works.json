@@ -1,13 +1,13 @@
 [
     {
         "id": 1,
-        "title": "Work 1",
-        "description": "Description 1 lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.",
-        "image": "/profile.jpg",
-        "slug": "work-1",
-        "url": "http://www.google.com",
-        "source": "http://www.google.com",
-        "stack": ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "Express"]
+        "title": "Camino a casa",
+        "description": "Una aplicación para facilitar la adopción de mascotas donde usuarios y refugios pueden publicar y encontrar animales. Desarrollada con React, Express, TypeScript, Node y MongoDB.",
+        "image": "/caminoacasa.webp",
+        "slug": "camino-a-casa",
+        "url": "https://petadoption-front.vercel.app",
+        "source": "https://github.com/LukaLiuzzi/petadoption",
+        "stack": ["React", "Express", "Typescript", "NodeJs", "MongoDB"]
     },
     {
         "id": 2,
