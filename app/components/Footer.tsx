@@ -3,7 +3,7 @@ import React from "react"
 const Footer = () => {
   return (
     <div
-      className="text-center font-bold text-muted-foreground py-4 flex justify-between items-center border-t border-border mt-4 rounded-md p-8"
+      className="text-center font-bold text-muted-foreground py-4 flex flex-col-reverse sm:flex-row gap-4 justify-between items-center border-t border-border mt-4 rounded-md p-8"
       style={{
         backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
       }}
