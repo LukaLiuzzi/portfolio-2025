@@ -25,7 +25,10 @@ export default async function RootLayout({
   const theme = cookieStore.get("theme")?.value || "light"
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={`${inter.variable} antialiased relative min-h-screen`}>
+      <body
+        className={`${inter.variable} antialiased relative min-h-screen`}
+        suppressHydrationWarning
+      >
         <div className="absolute inset-0 -z-10">
           <Waves
             lineColor={`${

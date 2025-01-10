@@ -4,7 +4,49 @@ import Link from "next/link"
 import Image from "next/image"
 import BackToTop from "@/app/components/BackToTop"
 import Footer from "@/app/components/Footer"
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
+import {
+  IoIosArrowBack,
+  IoIosArrowForward,
+  IoLogoJavascript,
+  IoLogoGithub,
+  IoLogoNodejs,
+  IoLogoHtml5,
+  IoLogoCss3,
+} from "react-icons/io"
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiReact,
+  SiPhp,
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiFirebase,
+} from "react-icons/si"
+import Gravity, { MatterBody } from "@/app/components/fancy/gravity"
+
+const getIconForTechnology = (tech: string) => {
+  const techMap: { [key: string]: { icon: React.ElementType; size: number } } =
+    {
+      javascript: { icon: IoLogoJavascript, size: 24 },
+      typescript: { icon: SiTypescript, size: 24 },
+      react: { icon: SiReact, size: 24 },
+      nextjs: { icon: SiNextdotjs, size: 24 },
+      nodejs: { icon: IoLogoNodejs, size: 24 },
+      html: { icon: IoLogoHtml5, size: 24 },
+      css: { icon: IoLogoCss3, size: 24 },
+      tailwindcss: { icon: SiTailwindcss, size: 24 },
+      express: { icon: SiExpress, size: 24 },
+      php: { icon: SiPhp, size: 24 },
+      github: { icon: IoLogoGithub, size: 24 },
+      mongodb: { icon: SiMongodb, size: 24 },
+      mysql: { icon: SiMysql, size: 24 },
+      firebase: { icon: SiFirebase, size: 24 },
+    }
+
+  return techMap[tech.toLocaleLowerCase()] || { icon: IoLogoGithub, size: 24 } // Default icon
+}
 
 export async function generateMetadata({
   params,
@@ -41,7 +83,7 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <div
-      className="px-8 rounded-xl"
+      className="px-8 rounded-xl relative"
       style={{
         backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
       }}
@@ -54,6 +96,34 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
           ← Todos los proyectos
         </Link>
         <div className="mt-10">
+          <div className="absolute h-full max-h-[270px] w-full mb-8 top-0 -z-10">
+            <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
+              {work?.stack.map((tech, index) => {
+                const IconData = getIconForTechnology(tech)
+                const randomX = Math.random() * 60 + 20
+                const randomY = Math.random() * 20 + 5
+                const bodyType = Math.random() > 0.7 ? "rectangle" : "circle"
+
+                return (
+                  <MatterBody
+                    key={index}
+                    matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
+                    bodyType={bodyType}
+                    x={`${randomX}%`}
+                    y={`${randomY}%`}
+                  >
+                    <div
+                      className={`p-4 ${
+                        bodyType === "circle" ? "rounded-full" : "rounded-md"
+                      } bg-background text-foreground border border-border shadow-md`}
+                    >
+                      <IconData.icon size={IconData.size} />
+                    </div>
+                  </MatterBody>
+                )
+              })}
+            </Gravity>
+          </div>
           <div className="flex items-center gap-4">
             <Image
               src={"/profile.jpg"}
@@ -123,8 +193,8 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
               src={work?.image}
               alt={work?.title || "Work image"}
               width={550}
-              loading="lazy"
               height={550}
+              priority
               className="rounded-lg object-cover mx-auto w-full max-h-[450px] animate-zoom-in animate-duration-500"
             />
           </Link>
