@@ -132,7 +132,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <button className={buttonStyles}>
+          {/* <button className={buttonStyles}>
             <Image
               src="https://flagcdn.com/w40/ar.png"
               alt="Argentina Flag"
@@ -140,11 +140,12 @@ const Navbar = () => {
               width={40}
               height={40}
             />
-          </button>
+          </button> */}
+          <div></div>
         </div>
 
         <div className="flex gap-2 md:hidden">
-          <button className={buttonStyles}>
+          {/* <button className={buttonStyles}>
             <Image
               src="https://flagcdn.com/w40/ar.png"
               alt="Argentina Flag"
@@ -152,7 +153,8 @@ const Navbar = () => {
               width={40}
               height={40}
             />
-          </button>
+          </button> */}
+          <div></div>
           <button onClick={toggleDarkMode} className={buttonStyles}>
             {darkMode ? (
               <svg
