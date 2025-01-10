@@ -80,7 +80,7 @@ const Skills = () => {
               <h3 className="text-lg font-bold text-muted-foreground">
                 {category === "Others" ? "Otros" : category}
               </h3>
-              <div className="flex flex-wrap gap-x-4 gap-y-4">
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-4">
                 {skillList.map((skill) => (
                   <div
                     key={skill.name}
