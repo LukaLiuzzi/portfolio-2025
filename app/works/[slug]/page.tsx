@@ -96,14 +96,16 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
           )}
         </div>
         {work?.image && (
-          <Image
-            src={work?.image}
-            alt={work?.title || "Work image"}
-            width={550}
-            loading="lazy"
-            height={550}
-            className="rounded-lg object-cover mx-auto w-full max-h-[450px]"
-          />
+          <Link href={work.url} target="_blank" className="cursor-pointer">
+            <Image
+              src={work?.image}
+              alt={work?.title || "Work image"}
+              width={550}
+              loading="lazy"
+              height={550}
+              className="rounded-lg object-cover mx-auto w-full max-h-[450px]"
+            />
+          </Link>
         )}
       </article>
       <div className="flex w-full mt-10 gap-4 flex-wrap sm:flex-nowrap">

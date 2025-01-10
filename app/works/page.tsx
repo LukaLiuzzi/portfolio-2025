@@ -89,7 +89,7 @@ export default function Works() {
             href={`/works/${work.slug}`}
           >
             <Image
-              src={"/profile.jpg"}
+              src={work.image}
               alt={work.title}
               width={550}
               loading="lazy"
