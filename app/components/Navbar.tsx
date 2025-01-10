@@ -3,6 +3,21 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import React, { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
+
+type Theme = "dark" | "light"
+
+const getCookie = (name: string) => {
+  const cookies = document.cookie.split(";")
+  const cookie = cookies.find((c) => c.trim().startsWith(`${name}=`))
+  return cookie ? cookie.split("=")[1] : null
+}
+
+const setCookie = (name: string, value: Theme, days: number = 365) => {
+  const date = new Date()
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+  document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`
+}
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -10,14 +25,18 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [activeItem, setActiveItem] = useState("")
+  const router = useRouter()
 
   useEffect(() => {
     setMounted(true)
-    const isDarkMode = localStorage.getItem("darkMode") === "true"
+    const theme = getCookie("theme") as Theme
+    const isDarkMode = theme === "dark"
     setDarkMode(isDarkMode)
     document.documentElement.classList.toggle("dark", isDarkMode)
+    if (!theme) {
+      setCookie("theme", "light")
+    }
 
-    // Set active item based on current path
     setActiveItem(pathname === "/" ? "home" : "works")
   }, [pathname])
 
@@ -27,8 +46,10 @@ const Navbar = () => {
 
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode
+    const newTheme: Theme = newDarkMode ? "dark" : "light"
     setDarkMode(newDarkMode)
-    localStorage.setItem("darkMode", String(newDarkMode))
+    setCookie("theme", newTheme)
+    router.refresh()
     document.documentElement.classList.toggle("dark", newDarkMode)
   }
 
@@ -144,7 +165,7 @@ const Navbar = () => {
             <svg
               className="w-6 h-6 text-foreground"
               fill="currentColor"
-              viewBox="0 0 20 20"
+              viewBox="0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
