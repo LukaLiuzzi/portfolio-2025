@@ -41,7 +41,7 @@ const Hero = () => {
           <ShinyText
             text="Software Developer"
             disabled={false}
-            speed={1}
+            speed={3}
             className="text-lg"
           />
         </h2>
