@@ -65,6 +65,9 @@ export async function generateMetadata({
 const projectsBtnsClassNames =
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-border bg-background hover:border-foreground/25 hover:bg-primary-foreground hover:text-accent-foreground h-9 px-4 py-2 transition-all hover:scale-105 hover:shadow-lg"
 
+export const dynamic = "force-static"
+// 'auto' | 'force-dynamic' | 'error' | 'force-static'
+
 const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params
 
