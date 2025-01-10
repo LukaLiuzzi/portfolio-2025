@@ -6,6 +6,20 @@ import BackToTop from "@/app/components/BackToTop"
 import Footer from "@/app/components/Footer"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const work = works.find((work) => work.slug === slug)
+
+  return {
+    title: `Luka Liuzzi | ${work?.title ?? "Trabajo"}`,
+    description: work?.description ?? "Uno de los trabajos que realicé.",
+  }
+}
+
 export async function generateStaticParams() {
   return works.map((work) => ({
     params: {

@@ -70,6 +70,12 @@ const skills: SkillCategories = {
   ],
 }
 
+export const metadata = {
+  title: "Luka Liuzzi | Trabajos",
+  description:
+    "Algunos de los proyectos en los que trabajé como programador Full Stack.",
+}
+
 export default function Works() {
   return (
     <div
