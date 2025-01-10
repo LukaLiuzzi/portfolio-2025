@@ -80,14 +80,19 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <p className="text-base text-muted-foreground mt-5">
           {work?.description}
         </p>
-        <div className="mt-5 marquee-container">
-          <div className="marquee-content">
-            {work?.stack &&
-              [...work.stack, ...work.stack].map((tech, index) => (
-                <div key={index} className="mx-4 text-muted-foreground">
-                  {tech}
-                </div>
-              ))}
+        <div className="mt-5">
+          <h3 className="text-sm font-semibold text-muted-foreground mb-1">
+            Skills utilizadas en este proyecto:
+          </h3>
+          <div className=" marquee-container">
+            <div className="marquee-content">
+              {work?.stack &&
+                [...work.stack, ...work.stack].map((tech, index) => (
+                  <div key={index} className="mx-4 text-muted-foreground">
+                    {tech}
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
         <div className="my-8 flex items-center gap-4 justify-center">
