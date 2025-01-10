@@ -228,12 +228,13 @@ export default function Waves({
 
     function tick(t) {
       const mouse = mouseRef.current
+      setSize() // Actualizar el bounding rect en cada frame
 
       mouse.sx += (mouse.x - mouse.sx) * 0.1
       mouse.sy += (mouse.y - mouse.sy) * 0.1
 
-      const dx = mouse.x - mouse.lx,
-        dy = mouse.y - mouse.ly
+      const dx = mouse.x - mouse.lx
+      const dy = mouse.y - mouse.ly
       const d = Math.hypot(dx, dy)
       mouse.v = d
       mouse.vs += (d - mouse.vs) * 0.1
@@ -242,6 +243,7 @@ export default function Waves({
       mouse.ly = mouse.y
       mouse.a = Math.atan2(dy, dx)
 
+      // Usar las coordenadas relativas directamente
       container.style.setProperty("--x", `${mouse.sx}px`)
       container.style.setProperty("--y", `${mouse.sy}px`)
 
@@ -255,7 +257,7 @@ export default function Waves({
       setLines()
     }
     function onMouseMove(e) {
-      updateMouse(e.pageX, e.pageY)
+      updateMouse(e.clientX, e.clientY)
     }
     function onTouchMove(e) {
       const touch = e.touches[0]
@@ -265,7 +267,7 @@ export default function Waves({
       const mouse = mouseRef.current
       const b = boundingRef.current
       mouse.x = x - b.left
-      mouse.y = y - b.top + window.scrollY
+      mouse.y = y - b.top
       if (!mouse.set) {
         mouse.sx = mouse.x
         mouse.sy = mouse.y
@@ -275,15 +277,21 @@ export default function Waves({
       }
     }
 
+    function onScroll() {
+      setSize()
+    }
+
     setSize()
     setLines()
     requestAnimationFrame(tick)
     window.addEventListener("resize", onResize)
+    window.addEventListener("scroll", onScroll)
     window.addEventListener("mousemove", onMouseMove)
     window.addEventListener("touchmove", onTouchMove, { passive: false })
 
     return () => {
       window.removeEventListener("resize", onResize)
+      window.removeEventListener("scroll", onScroll)
       window.removeEventListener("mousemove", onMouseMove)
       window.removeEventListener("touchmove", onTouchMove)
     }
@@ -307,15 +315,17 @@ export default function Waves({
       style={{
         backgroundColor,
         ...style,
+        position: "fixed", // Cambiar de absolute a fixed
       }}
-      className={`absolute top-0 left-0 w-full h-full overflow-hidden ${className}`}
+      className={`top-0 left-0 w-full h-full overflow-hidden ${className}`}
     >
       <div
-        className="absolute top-0 left-0 bg-[#160000] rounded-full w-[0.5rem] h-[0.5rem]"
+        className="fixed top-0 left-0 bg-[#160000] rounded-full w-[0.5rem] h-[0.5rem]"
         style={{
           transform:
             "translate3d(calc(var(--x) - 50%), calc(var(--y) - 50%), 0)",
           willChange: "transform",
+          pointerEvents: "none",
         }}
       />
       <canvas ref={canvasRef} className="block w-full h-full" />
