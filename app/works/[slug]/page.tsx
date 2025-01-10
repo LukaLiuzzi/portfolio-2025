@@ -96,7 +96,7 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
           ← Todos los proyectos
         </Link>
         <div className="mt-10">
-          <div className="absolute h-full max-h-[270px] w-full mb-8 top-0 -z-10">
+          <div className="absolute h-full max-h-[220px] w-full mb-8 top-0 -z-10">
             <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
               {work?.stack.map((tech, index) => {
                 const IconData = getIconForTechnology(tech)
