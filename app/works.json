@@ -7,26 +7,56 @@
         "slug": "camino-a-casa",
         "url": "https://petadoption-front.vercel.app",
         "source": "https://github.com/LukaLiuzzi/petadoption",
-        "stack": ["React", "Express", "Typescript", "NodeJs", "MongoDB"]
+        "stack": ["React", "Express", "Typescript", "NodeJs", "MongoDB", "TailwindCss"]
     },
     {
         "id": 2,
-        "title": "Work 2",
-        "description": "Description 2",
-        "image": "/profile.jpg",
-        "slug": "work-2",
-        "url": "http://www.google.com",
-        "source": "http://www.google.com",
-        "stack": ["HTML", "CSS", "JavaScript"]
+        "title": "Papelera Manager",
+        "description": "Un Ecommerce para una papelera en el cual los clientes pueden comprar a traves de la web y los administradores pueden gestionar los productos y pedidos.",
+        "image": "/papeleramanager.webp",
+        "slug": "papelera-manager",
+        "url": "https://papeleramanager.com.ar",
+        "source": "",
+        "stack": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"]
     },
     {
         "id": 3,
-        "title": "Work 3",
-        "description": "Description 3",
-        "image": "/profile.jpg",
-        "slug": "work-3",
-        "url": "http://www.google.com",
-        "source": "http://www.google.com",
+        "title": "Aymi lova",
+        "description": "Una página web desarrollada para una clienta que pinta murales y quiere mostrar su trabajo.",
+        "image": "/aymilova.webp",
+        "slug": "aymi-lova",
+        "url": "https://aymilova.vercel.app",
+        "source": "https://github.com/LukaLiuzzi/aymilova",
         "stack": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "id": 4,
+        "title": "Rock and Dolls",
+        "description": "RockandDolls es un e-commerce desarrollado para una clienta que tiene un emprendimiento de ropa.",
+        "image": "/rockanddolls.webp",
+        "slug": "rock-and-dolls",
+        "url": "https://galushowroom.web.app",
+        "source": "https://github.com/LukaLiuzzi/rockanddolls-react",
+        "stack": ["React", "Firebase", "JavaScript"]
+    },
+    {
+        "id": 5,
+        "title": "MovieFan",
+        "description": "MovieFan es una página web que muestra películas catalogadas por género y permite buscar por nombre. También permite ver el tráiler de la película si está disponible.",
+        "image": "/moviefan.webp",
+        "slug": "moviefan",
+        "url": "https://lukaliuzzi.github.io/moviefan",
+        "source": "https://github.com/LukaLiuzzi/moviefan",
+        "stack": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "id": 6,
+        "title": "Whatsapp Clone",
+        "description": "Un clon de la interfaz de Whatsapp web.",
+        "image": "/wsp-web.webp",
+        "slug": "whatsapp-clone",
+        "url": "https://whatsapp-web-ui-rosy.vercel.app",
+        "source": "https://github.com/LukaLiuzzi/whatsapp-web-ui",
+        "stack": ["NextJS", "TypeScript", "TailwindCss"]
     }
 ]
