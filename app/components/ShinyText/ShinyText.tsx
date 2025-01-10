@@ -1,15 +1,17 @@
-"use client"
+import { cookies } from "next/headers"
 
-import { useState, useEffect } from "react"
+type Theme = "light" | "dark"
 
-const ShinyText = ({ text, disabled = false, speed = 5, className = "" }) => {
+const ShinyText = async ({
+  text = "",
+  disabled = false,
+  speed = 5,
+  className = "",
+}) => {
   const animationDuration = `${speed}s`
-  const [isDark, setIsDark] = useState(false) // Default value
+  const cookieStore = await cookies()
 
-  useEffect(() => {
-    const darkMode = localStorage.getItem("darkMode") === "true"
-    setIsDark(darkMode)
-  }, [])
+  const theme = cookieStore.get("theme")?.value || ("light" as Theme)
 
   return (
     <div
@@ -18,7 +20,7 @@ const ShinyText = ({ text, disabled = false, speed = 5, className = "" }) => {
       } ${className}`}
       style={{
         backgroundImage: `${
-          isDark
+          theme === "dark"
             ? "linear-gradient(120deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 60%)"
             : "linear-gradient(120deg, rgba(0,0,0, 0) 40%, rgba(0,0,0, 0.8) 50%, rgba(0,0,0, 0) 60%)"
         }`,
