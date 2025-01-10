@@ -6,11 +6,11 @@ import ExperienceItem from "./ExperienceItem"
 const Education = () => {
   return (
     <Section>
-      <Subtitle text="Educacion" />
+      <Subtitle text="Educación" />
       <div className="flex flex-col gap-y-4 w-full md:w-3/4">
         <ExperienceItem
           title="Tecnicatura Universitaria en Ciberseguridad"
-          company="Universidad Nacional Raul Scalabrini Ortiz"
+          company="Universidad Nacional Raúl Scalabrini Ortiz"
           date="2023 - Actualidad"
         />
         <ExperienceItem

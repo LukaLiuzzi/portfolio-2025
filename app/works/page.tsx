@@ -79,7 +79,7 @@ export default function Works() {
       }}
     >
       <h1 className="text-center sm:text-lg text-sm text-muted-foreground my-8 pt-8">
-        Algunos proyectos en los que trabaje
+        Algunos proyectos en los que trabajé
       </h1>
       <section className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {works.map((work) => (

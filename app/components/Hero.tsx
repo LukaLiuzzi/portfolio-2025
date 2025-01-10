@@ -20,7 +20,14 @@ const Hero = () => {
 
       <div className="text-center">
         <div className="relative lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6">
-          <h1>Luka Liuzzi</h1>
+          <h1
+            style={{
+              backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
+            }}
+            className="p-4 rounded-full"
+          >
+            Luka Liuzzi
+          </h1>
           <div className="absolute w-full h-1 -bottom-2 z-50">
             <ElasticLine
               grabThreshold={50}

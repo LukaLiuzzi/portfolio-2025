@@ -20,7 +20,7 @@ const Experience = () => {
           title="Desarrollador Full Stack"
           company="Boceto Contenidos"
           date="2021 - 2024"
-          description="Desarrollé soluciones web personalizadas, optimizando el rendimiento y la experiencia del usuario. Implementé nuevas funcionalidades y realicé mantenimiento de aplicaciones existentes, asegurando la calidad del código y la satisfacción del cliente. Trabaje en colaboración con diseñadores y otros desarrolladores para garantizar la coherencia y la eficacia en el desarrollo de productos."
+          description="Desarrollé soluciones web personalizadas, optimizando el rendimiento y la experiencia del usuario. Implementé nuevas funcionalidades y realicé mantenimiento de aplicaciones existentes, asegurando la calidad del código y la satisfacción del cliente. Trabajé en colaboración con diseñadores y otros desarrolladores para garantizar la coherencia y la eficacia en el desarrollo de productos."
         />
         <ExperienceItem
           title="Desarrollador Freelance"

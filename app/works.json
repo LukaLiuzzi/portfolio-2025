@@ -2,8 +2,8 @@
     {
         "id": 1,
         "title": "Camino a casa",
-        "description": "Una aplicación para facilitar la adopción de mascotas donde usuarios y refugios pueden publicar y encontrar animales. Desarrollada con React, Express, TypeScript, Node y MongoDB.",
-        "image": "/caminoacasa.webp",
+        "description": "Una aplicación para facilitar la adopción de mascotas donde usuarios y refugios pueden publicar y encontrar animales.",
+        "image": "/caminoacasa.png",
         "slug": "camino-a-casa",
         "url": "https://petadoption-front.vercel.app",
         "source": "https://github.com/LukaLiuzzi/petadoption",
