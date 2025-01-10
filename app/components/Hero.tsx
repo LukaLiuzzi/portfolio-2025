@@ -10,8 +10,7 @@ const Hero = () => {
         <Image
           src="/luka.png"
           alt="Profile picture"
-          loading="lazy"
-          decoding="async"
+          priority
           className="rounded-full"
           width={160}
           height={160}
