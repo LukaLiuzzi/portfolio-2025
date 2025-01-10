@@ -127,9 +127,7 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
             />
             <div>
               <h3 className="text-sm font-semibold">Luka Liuzzi</h3>
-              <h4 className="w-fit cursor-pointer text-xs font-normal hover:underline">
-                @lukaliuzzi
-              </h4>
+              <h4 className="w-fit text-xs font-normal">@lukaliuzzi</h4>
             </div>
           </div>
         </div>
