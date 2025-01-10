@@ -18,24 +18,28 @@ const Hero = () => {
         />
       </div>
 
-      <div className="text-center">
-        <div className="relative lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6 animate-blurred-fade-in">
+      <div className="text-center relative">
+        <div className="lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6 animate-blurred-fade-in">
           <h1
             style={{
               backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
             }}
-            className="p-4 rounded-full"
+            className="p-4 rounded-full relative"
           >
             Luka Liuzzi
+            <div className="absolute left-0 top-0">
+              <ElasticLine
+                releaseThreshold={50}
+                strokeWidth={1}
+                animateInTransition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                  delay: 0.15,
+                }}
+              />
+            </div>
           </h1>
-          <div className="absolute w-full h-1 -bottom-2 z-50">
-            <ElasticLine
-              grabThreshold={50}
-              releaseThreshold={200}
-              strokeWidth={1}
-              className="z-50"
-            />
-          </div>
         </div>
         <h2 className="font-medium rounded-3xl border border-border bg-primary-foreground py-2 text-md animate-blurred-fade-in">
           <ShinyText
