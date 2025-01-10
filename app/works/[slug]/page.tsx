@@ -14,6 +14,9 @@ export async function generateStaticParams() {
   }))
 }
 
+const projectsBtnsClassNames =
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-border bg-background hover:border-foreground/25 hover:bg-primary-foreground hover:text-accent-foreground h-9 px-4 py-2 transition-all hover:scale-105 hover:shadow-lg"
+
 const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params
 
@@ -79,7 +82,7 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
               href={work.url}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-border bg-background hover:border-foreground/25 hover:bg-primary-foreground hover:text-accent-foreground h-9 px-4 py-2"
+              className={projectsBtnsClassNames}
             >
               Ver proyecto
             </a>
@@ -89,7 +92,7 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
               href={work.source}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-border bg-background hover:border-foreground/25 hover:bg-primary-foreground hover:text-accent-foreground h-9 px-4 py-2"
+              className={projectsBtnsClassNames}
             >
               Ver código
             </a>
@@ -103,7 +106,7 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
               width={550}
               loading="lazy"
               height={550}
-              className="rounded-lg object-cover mx-auto w-full max-h-[450px]"
+              className="rounded-lg object-cover mx-auto w-full max-h-[450px] animate-zoom-in animate-duration-500"
             />
           </Link>
         )}

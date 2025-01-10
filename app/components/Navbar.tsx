@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="flex justify-between items-center text-foreground p-4 relative border-b border-border rounded-md"
+      className="flex justify-between items-center text-foreground p-4 relative border-b border-border rounded-md animate-fade-in-down animate-duration-500"
       style={{
         backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
       }}

@@ -6,7 +6,7 @@ import ElasticLine from "./fancy/elastic-line"
 const Hero = () => {
   return (
     <section className="flex flex-col justify-center items-center mt-10">
-      <div className="rounded-full px-2 pt-2 bg-primary-foreground">
+      <div className="rounded-full px-2 pt-2 bg-primary-foreground animate-blurred-fade-in">
         <Image
           src="/luka.png"
           alt="Profile picture"
@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
 
       <div className="text-center">
-        <div className="relative lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6">
+        <div className="relative lg:text-4xl text-3xl font-black text-foreground mt-10 mb-6 animate-blurred-fade-in">
           <h1
             style={{
               backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
@@ -37,7 +37,7 @@ const Hero = () => {
             />
           </div>
         </div>
-        <h2 className="font-medium rounded-3xl border border-border bg-primary-foreground py-2 text-md">
+        <h2 className="font-medium rounded-3xl border border-border bg-primary-foreground py-2 text-md animate-blurred-fade-in">
           <ShinyText
             text="Software Developer"
             disabled={false}
@@ -47,7 +47,7 @@ const Hero = () => {
         </h2>
       </div>
       <div
-        className="flex justify-center items-center mt-10 gap-4 p-4 rounded-full"
+        className="flex justify-center items-center mt-10 gap-4 p-4 rounded-full animate-blurred-fade-in"
         style={{
           backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
         }}

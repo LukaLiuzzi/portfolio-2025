@@ -78,13 +78,13 @@ export default function Works() {
         backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
       }}
     >
-      <h1 className="text-center sm:text-lg text-sm text-muted-foreground my-8 pt-8">
+      <h1 className="text-center sm:text-lg text-sm text-muted-foreground my-8 pt-8 animate-zoom-in animate-duration-500">
         Algunos proyectos en los que trabajé
       </h1>
       <section className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {works.map((work) => (
           <Link
-            className="group relative h-full flex bg-primary-foreground/25 cursor-pointer flex-col items-start justify-center gap-y-3 rounded border border-border duration-300 ease-in-out hover:border-foreground/25 hover:bg-primary-foreground"
+            className="animate-zoom-in animate-duration-500 group relative h-full flex bg-primary-foreground/25 cursor-pointer flex-col items-start justify-center gap-y-3 rounded border border-border duration-300 ease-in-out hover:border-foreground/25 hover:bg-primary-foreground"
             key={work.id}
             href={`/works/${work.slug}`}
           >
