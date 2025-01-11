@@ -31,6 +31,16 @@
     },
     {
         "id": 4,
+        "title": "ArgTube",
+        "description": "ArgTube es una plataforma de videos similar a youtube con videos iconicos argentinos.",
+        "image": "/argtube.png",
+        "slug": "argtube",
+        "url": "https://argtube-next.vercel.app",
+        "source": "",
+        "stack": ["TypeScript","NodeJs", "NextJS", "JavaScript", "MongoDB", "Express", "React", "TailwindCss"]
+    },
+    {
+        "id": 5,
         "title": "Rock and Dolls",
         "description": "RockandDolls es un e-commerce desarrollado para una clienta que tiene un emprendimiento de ropa.",
         "image": "/rockanddolls.webp",
@@ -40,7 +50,7 @@
         "stack": ["React", "Firebase", "JavaScript"]
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "MovieFan",
         "description": "MovieFan es una página web que muestra películas catalogadas por género y permite buscar por nombre. También permite ver el tráiler de la película si está disponible.",
         "image": "/moviefan.webp",
@@ -50,7 +60,7 @@
         "stack": ["HTML", "CSS", "JavaScript"]
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "Whatsapp Clone",
         "description": "Un clon de la interfaz de Whatsapp web.",
         "image": "/wsp-web.webp",
