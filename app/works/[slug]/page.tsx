@@ -24,7 +24,7 @@ import {
   SiMysql,
   SiFirebase,
   SiDocker,
-  SiShell,
+  SiGnubash,
 } from "react-icons/si"
 import Gravity, { MatterBody } from "@/app/components/fancy/gravity"
 
@@ -46,7 +46,7 @@ const getIconForTechnology = (tech: string) => {
       mysql: { icon: SiMysql, size: 24 },
       firebase: { icon: SiFirebase, size: 24 },
       docker: { icon: SiDocker, size: 24 },
-      shell: { icon: SiShell, size: 24 },
+      shell: { icon: SiGnubash, size: 24 },
     }
 
   return techMap[tech.toLocaleLowerCase()] || { icon: IoLogoGithub, size: 24 } // Default icon
