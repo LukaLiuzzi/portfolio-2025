@@ -30,16 +30,6 @@
         "stack": ["HTML", "CSS", "JavaScript"]
     },
     {
-        "id": 4,
-        "title": "ArgTube",
-        "description": "ArgTube es una plataforma de videos similar a youtube con videos iconicos argentinos.",
-        "image": "/argtube.png",
-        "slug": "argtube",
-        "url": "https://argtube-next.vercel.app",
-        "source": "",
-        "stack": ["TypeScript","NodeJs", "NextJS", "JavaScript", "MongoDB", "Express", "React", "TailwindCss"]
-    },
-    {
         "id": 5,
         "title": "Bedelía",
         "description": "Bedelía es una aplicación web para la gestión de alumnos, materias y notas de una institución educativa.",
@@ -48,6 +38,16 @@
         "url": "https://bedelia.vercel.app",
         "source": "https://github.com/LukaLiuzzi/bedelia",
         "stack": ["React", "NodeJs", "MySQL", "JavaScript", "Express", "Docker", "Shell", "HTML", "CSS"]
+    },
+    {
+        "id": 5,
+        "title": "ArgTube",
+        "description": "ArgTube es una plataforma de videos similar a youtube con videos iconicos argentinos.",
+        "image": "/argtube.png",
+        "slug": "argtube",
+        "url": "https://argtube-next.vercel.app",
+        "source": "",
+        "stack": ["TypeScript","NodeJs", "NextJS", "JavaScript", "MongoDB", "Express", "React", "TailwindCss"]
     },
     {
         "id": 6,
