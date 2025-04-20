@@ -9,7 +9,7 @@ const Education = () => {
       <Subtitle text="Educación" />
       <div className="flex flex-col gap-y-4 w-full md:w-3/4">
         <ExperienceItem
-          title="Tecnicatura Universitaria en Ciberseguridad"
+          title="Licenciatura Universitaria en Ciberseguridad"
           company="Universidad Nacional Raúl Scalabrini Ortiz"
           date="2023 - Actualidad"
         />
@@ -19,7 +19,7 @@ const Education = () => {
           date="Egreso en 2022"
         />
         <ExperienceItem
-          title="Inglés B2"
+          title="Inglés B1"
           company="Instituto Superior de Cultura Inglesa"
           date="2022 - Actualidad"
         />
