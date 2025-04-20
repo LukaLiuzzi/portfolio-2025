@@ -20,7 +20,7 @@ const Education = () => {
         />
         <ExperienceItem
           title="Inglés B1"
-          company="Instituto Superior de Cultura Inglesa"
+          company="Centro Universitario de Idiomas"
           date="2022 - Actualidad"
         />
       </div>
