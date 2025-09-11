@@ -79,7 +79,7 @@ export const metadata = {
 export default function Works() {
   return (
     <div
-      className="px-8 rounded-xl"
+      className="rounded-xl"
       style={{
         backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
       }}

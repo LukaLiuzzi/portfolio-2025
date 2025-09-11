@@ -79,7 +79,7 @@ const Work = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <div
-      className="px-8 rounded-xl relative"
+      className="rounded-xl relative"
       style={{
         backgroundColor: `rgb(var(--background) / var(--bg-opacity))`,
       }}
