@@ -1,6 +1,46 @@
 [
   {
     "id": 1,
+    "title": "Baic Uruguay",
+    "description": "Plataforma digital de alto rendimiento para uno de los fabricantes automotrices de mayor crecimiento en la región, diseñada para convertir visitas en oportunidades comerciales reales.",
+    "image": "/baic.webp",
+    "slug": "baic",
+    "url": "https://baicuruguay.com.uy",
+    "source": "",
+    "stack": ["React", "TailwindCss", "Integracion con CRM"]
+  },
+  {
+    "id": 2,
+    "title": "KYC Uruguay",
+    "description": "Sitio web de venta de vehículos con catálogo dinámico e integración total con CRM.",
+    "image": "/kyc.webp",
+    "slug": "kyc",
+    "url": "https://kycuruguay.com.uy",
+    "source": "",
+    "stack": ["NextJS", "TailwindCss", "Integracion con CRM"]
+  },
+  {
+    "id": 3,
+    "title": "Sindicato Luz y Fuerza",
+    "description": "Ecosistema digital completo para uno de los sindicatos más grandes del país, transformando procesos históricamente manuales en experiencias digitales accesibles para miles de afiliados.",
+    "image": "/sindicato.webp",
+    "slug": "sindicato-luz-y-fuerza",
+    "url": "",
+    "source": "",
+    "stack": ["NextJS", "NodeJs", "IA", "OpenAI", "TailwindCss"]
+  },
+  {
+    "id": 4,
+    "title": "Banco Atlas",
+    "description": "Sistema web de denuncia de siniestros diseñado para operar en un entorno de máxima exigencia: seguro, intuitivo y disponible 24/7 para los clientes del banco.",
+    "image": "/banco-atlas.webp",
+    "slug": "banco-atlas",
+    "url": "",
+    "source": "",
+    "stack": ["NextJS", "Seguridad", "Infraestructura"]
+  },
+  {
+    "id": 5,
     "title": "Anturn - SaaS de gestión de turnos para negocios",
     "description": "Anturn es una plataforma web diseñada para que los negocios puedan gestionar sus turnos de manera eficiente. Permite a los clientes reservar turnos en línea, recibir recordatorios y a los administradores organizar y supervisar las reservas fácilmente. Tiene integración con MercadoPago para gestionar pagos y suscripciones.",
     "image": "/anturn.webp",
@@ -19,17 +59,27 @@
     ]
   },
   {
-    "id": 2,
+    "id": 6,
     "title": "Papelera Manager",
-    "description": "Un Ecommerce para una papelera en el cual los clientes pueden comprar a traves de la web y los administradores pueden gestionar los productos y pedidos.",
-    "image": "/papeleramanager.webp",
+    "description": "Plataforma de ecommerce B2B mayorista con motor de precios dinámico y gestión de stock en tiempo real, diseñada para escalar junto con el negocio.",
+    "image": "/papelera.webp",
     "slug": "papelera-manager",
     "url": "https://papeleramanager.com.ar",
     "source": "",
     "stack": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"]
   },
   {
-    "id": 3,
+    "id": 7,
+    "title": "Belier",
+    "description": "Tienda online de moda con identidad visual premium and una experiencia de compra móvil diseñada para convertir, desde el primer scroll hasta el checkout.",
+    "image": "/belier.webp",
+    "slug": "belier",
+    "url": "https://belier.com.ar",
+    "source": "",
+    "stack": ["NextJS", "TailwindCss", "Ecommerce"]
+  },
+  {
+    "id": 8,
     "title": "MovieFan",
     "description": "MovieFan es una página web que muestra películas catalogadas por género y permite buscar por nombre. También permite ver el tráiler de la película si está disponible.",
     "image": "/moviefan.webp",
@@ -39,9 +89,9 @@
     "stack": ["HTML", "CSS", "JavaScript"]
   },
   {
-    "id": 4,
+    "id": 9,
     "title": "Aymi lova",
-    "description": "Una página web desarrollada para una clienta que pinta murales y quiere mostrar su trabajo.",
+    "description": "Landing page de alto impacto para un estudio de diseño creativo, donde la página en sí misma es la mejor demostración del trabajo que el estudio es capaz de hacer.",
     "image": "/aymilova.webp",
     "slug": "aymi-lova",
     "url": "https://aymilova.vercel.app",
@@ -49,10 +99,10 @@
     "stack": ["HTML", "CSS", "JavaScript"]
   },
   {
-    "id": 5,
-    "title": "Bedelía",
-    "description": "Bedelía es una aplicación web para la gestión de alumnos, materias y notas de una institución educativa.",
-    "image": "/bedelia.png",
+    "id": 10,
+    "title": "Bedelía UNER",
+    "description": "Plataforma integral de gestión académica que reemplazó años de planillas y papel por un sistema centralizado, colaborativo y accesible desde cualquier dispositivo.",
+    "image": "/uner.webp",
     "slug": "bedelia",
     "url": "https://bedelia.vercel.app",
     "source": "https://github.com/LukaLiuzzi/bedelia",
@@ -69,7 +119,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 11,
     "title": "Rock and Dolls",
     "description": "RockandDolls es un e-commerce desarrollado para una clienta que tiene un emprendimiento de ropa.",
     "image": "/rockanddolls.webp",
@@ -79,7 +129,7 @@
     "stack": ["React", "Firebase", "JavaScript"]
   },
   {
-    "id": 7,
+    "id": 12,
     "title": "Whatsapp Clone",
     "description": "Un clon de la interfaz de Whatsapp web.",
     "image": "/wsp-web.webp",
@@ -89,7 +139,7 @@
     "stack": ["NextJS", "TypeScript", "TailwindCss"]
   },
   {
-    "id": 8,
+    "id": 13,
     "title": "Camino a casa",
     "description": "Una aplicación para facilitar la adopción de mascotas donde usuarios y refugios pueden publicar y encontrar animales.",
     "image": "/caminoacasa.png",
@@ -106,9 +156,9 @@
     ]
   },
   {
-    "id": 9,
+    "id": 14,
     "title": "ArgTube",
-    "description": "ArgTube es una plataforma de videos similar a youtube. La complejidad de este proyecto radica en la implementación de características como la carga y reproducción de videos, la gestión de usuarios y comentarios, y la optimización del rendimiento para manejar grandes volúmenes de datos multimedia.",
+    "description": "ArgTube es una plataforma de videos similar a youtube. La complejidad de este proyecto radica en la implementación de características como la carga y reproducción de videos, la gestión de usuarios y comentarios, and la optimización del rendimiento para manejar grandes volúmenes de datos multimedia.",
     "image": "/argtube.png",
     "slug": "argtube",
     "url": "https://argtube-next.vercel.app",
